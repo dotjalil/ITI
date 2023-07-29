@@ -1,6 +1,6 @@
 function getCookie(cookieName) {
   try {
-    const cookie = document.cookie
+    const cookie = decodeURIComponent(document.cookie)
       .split("; ")
       .filter((cookie) => {
         const [cName] = cookie.split("=");
@@ -14,7 +14,8 @@ function getCookie(cookieName) {
 }
 
 function setCookie(cookieName, cookieValue, expiryDate) {
-  document.cookie = `${cookieName}=${cookieValue}; expires=${expiryDate}`;
+  const expiration = new Date(expiryDate);
+  document.cookie = `${cookieName}=${cookieValue}; expires=${expiration}`;
 }
 
 function deleteCookie(cookieName) {
@@ -22,7 +23,7 @@ function deleteCookie(cookieName) {
 }
 
 function allCookieList() {
-  return document.cookie.split("; ");
+  return decodeURIComponent(document.cookie).split("; ");
 }
 
 function hasCookie(cookieName) {
