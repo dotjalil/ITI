@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 50px auto;
+      }
+      table td,
+      table th {
+        min-width: 100px;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Users' Table</h1>
+        <button onclick="handleLoadData()">Load Data</button>
+      </div>
+      <table id="table">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>Company</th>
+        </tr>
+      </table>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
