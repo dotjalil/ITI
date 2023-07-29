@@ -10,7 +10,9 @@ if (!getCookie("isRegisteredUser")) {
 
   var uname = document.getElementById("userName");
   var views = document.getElementById("views");
-
+  var color = getCookie("color");
+  uname.style.color = color;
+  views.style.color = color;
   uname.innerText = getCookie("name");
   views.innerText = getCookie("pageViews");
 

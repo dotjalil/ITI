@@ -6,6 +6,7 @@ function handleRegisteration() {
   console.log("Hello");
   const userName = document.getElementById("name").value;
   const userAge = document.getElementById("age").value;
+  const color = document.getElementById("color").value;
   var userGender;
   const genders = document.getElementsByName("gender");
   for (const selection of genders) {
@@ -21,6 +22,7 @@ function handleRegisteration() {
 
   setCookie("name", userName, "31 Jul 2024");
   setCookie("age", userAge, "31 Jul 2024");
+  setCookie("color", color, "31 Jul 2024");
   setCookie("gender", userGender, "31 Jul 2024");
   setCookie("isRegisteredUser", true, "31 July 2023");
 
